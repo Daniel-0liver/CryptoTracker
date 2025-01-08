@@ -17,6 +17,7 @@ import kotlinx.coroutines.launch
 class CoinListViewModel(
     private val coinDataSource: CoinDataSource
 ): ViewModel() {
+
     private val _state = MutableStateFlow(CoinListState())
     val state = _state
         .onStart { loadCoins() }
