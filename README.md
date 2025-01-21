@@ -17,6 +17,6 @@ CryptoTracker is an Android application currently in development that allows use
 ## Tech Stack 🛠️
 - **Language**: Kotlin
 - **Dependency Injection**: Koin
-- **Networking**: Retrofit & Kotlin Coroutines
+- **Networking**: Ktor & Kotlin Coroutines
 - **API**: CoinCap API
 - **Build System**: Gradle
