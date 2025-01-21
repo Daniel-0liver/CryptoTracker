@@ -1,6 +1,5 @@
 package com.plcoding.cryptotracker.crypto.data.networking
 
-import android.util.Log.d
 import com.plcoding.cryptotracker.core.data.networking.constructUrl
 import com.plcoding.cryptotracker.core.data.networking.safeCall
 import com.plcoding.cryptotracker.core.domain.util.NetworkError
