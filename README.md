@@ -10,7 +10,6 @@ CryptoTracker is an Android application currently in development that allows use
 - Crypto details fetched from the [CoinCap API](https://coincap.io/).
 - Offline support for basic functionality.
 - Dependency Injection with **Koin**.
-- Modular architecture with **Gradle**.
 
 ---
 
