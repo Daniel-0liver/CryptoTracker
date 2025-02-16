@@ -7,7 +7,7 @@ CryptoTracker is an Android application currently in development that allows use
 ## Features (Planned 🚧)
 - Live cryptocurrency prices and market trends.
 - Interactive and user-friendly UI.
-- Crypto details fetched from the [CoinCap API](https://coincap.io/).
+- Crypto details fetched from the [CoinCap API](https://docs.coincap.io/).
 - Offline support for basic functionality.
 - Dependency Injection with **Koin**.
 
