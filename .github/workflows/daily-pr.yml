@@ -1,0 +1,38 @@
+name: Daily PR
+
+on:
+  schedule:
+    - cron: "0 12 * * *" # every day at 12:00 UTC
+  workflow_dispatch: # allows you to trigger manually too
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Make changes
+        run: |
+          echo "Daily update: $(date)" >> daily-log.txt
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b daily-update-$(date +%Y-%m-%d)
+          git add .
+          git commit -m "Daily update on $(date)"
+
+      - name: Push changes
+        run: |
+          git push origin HEAD
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Daily update"
+          title: "Daily update"
+          body: "This PR was automatically generated on $(date)."
+          branch: daily-update-$(date +%Y-%m-%d)
