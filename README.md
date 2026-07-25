@@ -1,4 +1,4 @@
-# CryptoTracker 📈
+# CryptoTracker 📈 WIP
 
 CryptoTracker is a native Android app built with Kotlin and Jetpack Compose for tracking crypto market data from the [CoinCap API](https://docs.coincap.io/).
 
